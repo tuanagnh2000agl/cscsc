@@ -1,0 +1,13 @@
+.c-marker {
+    background: -webkit-linear-gradient(left, #FFDA4D 50%, transparent 50%);
+    background: -moz-linear-gradient(left, #FFDA4D 50%, transparent 50%);
+    background: linear-gradient(left, #FFDA4D 50%, transparent 50%);
+    background-repeat: no-repeat;
+    background-size: 200% 4px; 
+    background-position: 100% .5em;
+    transition: 2s;
+    line-height: 1.76;
+    &.is-active{
+        background-position: 0% 0.9em;
+    }
+}

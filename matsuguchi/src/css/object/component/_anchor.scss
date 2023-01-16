@@ -1,0 +1,58 @@
+.c-anchor{
+    &__list{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 38px 30px;
+        color: #333333;
+        font-family: $font-family-gothic;
+        font-size: ( 16px / $font-size) * 1rem;
+        border-radius: 8px;
+        background: #F4F4F4;
+    }
+    &__item{
+        border-bottom: 1px solid #78C53C;
+        transition: all 0.2s linear;
+        line-height: 1;
+        letter-spacing: 0.8px;
+        color: #333333;
+        &.--active{
+            font-weight: bold;
+            font-size: ( 15px / $font-size) * 1rem;
+            border: 0;
+        }
+    }
+}
+@include media-breakpoint-tab{
+    .c-anchor{
+        &__list{
+            flex-wrap: wrap;
+        }
+        &__item{
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@include media-breakpoint-sp{
+    .c-anchor{
+        &__list{
+           flex-direction: column;
+           padding-bottom: 46px;
+        }
+        &__item{
+            &:not(:last-child){
+                margin-bottom: 24px;
+            }
+        }
+    }
+}
+@include media-breakpoint-pc-tab{
+    .c-anchor{
+        &__item{
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+}

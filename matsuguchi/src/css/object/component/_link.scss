@@ -1,0 +1,71 @@
+/* link */ 
+
+@include media-breakpoint-pc{
+    a[href^="tel"]{
+        pointer-events: none;
+    }
+}
+.c-link{
+    font-size: ( 16px / $font-size) * 1rem;
+    display: flex;
+    align-items: center;
+    font-family: $font-family-gothic;
+    margin-bottom: 20px;
+    &__contain{
+        display: flex;
+    }
+    &__text{
+        color: #333333;
+    }
+    &__icon{
+        margin: 0 5px;
+    }
+    &__click{
+        color: #78C53C;
+        border-bottom: 1px solid #78C53C;
+        margin-right: 6px;
+        line-height: 1;
+        transition: all 0.2s linear;
+    }
+    &__pdf{
+        font-weight: bold;
+        font-size: ( 10px / $font-size) * 1rem;
+	    font-family: 'Zen Maru Gothic', sans-serif;
+        line-height: 1;
+        width: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 14px;
+        color: #fff;
+        background: #FF3C00;
+    }
+    &__imgIcon{
+        line-height: 1;
+    }
+}
+@include media-breakpoint-sp{
+    .c-link{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 24px;
+        &__contain{
+            align-items: center;
+            &:not(:last-child){
+                margin-bottom: 6px;
+            }
+        }
+        &__click{
+            padding-bottom: 7px;
+        }
+    }
+}
+@include media-breakpoint-pc-tab{
+    .c-link{
+        &__click{
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+}

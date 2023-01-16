@@ -1,0 +1,116 @@
+/* newsparts */ 
+.c-news{
+    border-bottom: 1px solid #003C78;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:first-child{
+        border-top: 1px solid #003C78;
+    }
+    &__link{
+        padding: 12.3px 0;
+    }
+    &__link, &__flex{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        color: #333333;
+        line-height: 1.75;
+    }
+    &__new{
+        width: 21.7%;
+        span{
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #C82310;
+            height: 22px;
+            width: 50px;
+            font-weight: bold;
+            padding-top: 2px;
+        }
+    }
+    &__day{
+        margin-right: 8px;
+        width: 100px;
+        .u-only__sp{
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #C82310;
+            height: 22px;
+            width: 50px;
+            line-height: 1.75;
+            font-weight: bold;
+        }
+    }
+    &__title{
+        letter-spacing: 2px;
+        line-height: 1.75;
+        width: 88%;
+    }
+    img{
+        transition: all 0.2s linear;
+        margin-right: 8%;
+    }
+  
+}
+@include media-breakpoint-pc-tab{
+    .c-news{
+        transition: all 0.2s linear;
+        &:hover{
+            cursor: pointer;
+            opacity: 0.7;
+            img{
+                transform: translateX(15px);
+            }
+        }
+    }
+}
+
+// Tablet
+// --------------------------------------------------
+@include media-breakpoint-tab {
+    .c-news{
+        &__new{
+            width: 15%;
+        }
+        img{
+            margin-right: 4%;
+        }
+    
+    }
+}
+// sp
+@include media-breakpoint-sp {
+    .c-news{
+        &__day{
+            width: unset;
+            line-height: 1.75;
+            span.u-only__sp{
+                margin-left: 13px;
+            }
+        }
+        &__flex{
+            flex-direction: column;
+            align-items: unset;
+            padding-left: 22px;
+        }
+        img{
+            margin-right: 5%;
+        }
+        &__title{
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            line-height: 1.5;
+            letter-spacing: 1.6px;
+        }
+        &__link{
+            padding: 13.8px 0 12.4px 0;
+        }
+    }
+}

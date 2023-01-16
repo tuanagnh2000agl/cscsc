@@ -1,0 +1,143 @@
+/* btn */ 
+.c-btn {
+    display: block;
+    max-width: 200px;
+    width: 100%;
+    line-height: 1;
+    text-align: center;
+    color: #78C53C;
+    font-size: ( 18px / $font-size) * 1rem;
+    border: 1px solid #78C53C;
+    position: relative;
+    padding: 10px 0;
+    border-radius: 50px;
+    &.--edit{
+        margin: 0 auto;
+        padding: 20px 0;
+        max-width: 300px;
+        &::after{
+            right: 34px;
+        }
+    }
+    &.--header{
+        &::after{
+            right: 19px;
+        }
+    }
+    &::after{
+        content: "";
+        transition: all 0.2s linear;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        display: inline-block;
+        transform: translateY(-50%);
+        background: url('./images/common/icon_right.svg') no-repeat center/cover;
+        width: 10px;
+        height: 12px;
+    }
+    &.--category{
+        background: #C9C9C9;
+        font-size: ( 16px / $font-size) * 1rem;
+        color: #fff;
+        border: 0;
+        border-radius: 20px;
+        max-width: 220px;
+        margin-bottom: 10px;
+        padding: 12px 0;
+        position: relative;
+        cursor: pointer;
+        &::after{
+            display: none;
+        }
+        &.--active{
+            background: #78C53C;
+            cursor: default;
+            &:hover{
+                opacity: unset;
+            }
+            &::after{
+                content: "";
+                transition: all 0.2s linear;
+                position: absolute;
+                right: -10px;
+                top: 20px;  
+                display: inline-block;
+                background: url('./images/common/iconbtn.png') no-repeat center/cover;
+                width: 31px;
+                height: 40px;
+            }
+        }
+    }
+}
+
+
+@include media-breakpoint-tab-sp{
+    .c-btn {
+        &.--category{
+            &.--active{
+                &::after{
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: unset;
+                    bottom: -9px;  
+                    background: url('./images/common/iconbtnSp.png') no-repeat center/cover;
+                    width: 32px;
+                    height: 9px;
+                }
+            }
+            &:not(:last-child){
+                margin-right: 8px;
+            }
+        }
+    }
+}
+@include media-breakpoint-sp{
+    .c-btn {
+        &.--edit{
+            max-width: 100%;
+            &::after {
+                right: 50px;
+            }
+        }
+        &.--category{
+            font-size: ( 14px / $font-size) * 1rem;
+            max-width: 108px;
+            &:not(:last-child) {
+                margin-right: 6px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 375px) {
+    .c-btn {
+        &.--category{
+            &:not(:last-child) {
+                margin-right: 4px;
+            }
+        }
+    }
+  }
+// Desktop + Tablet
+// --------------------------------------------------
+@include media-breakpoint-pc-tab {
+    .c-btn {
+        &:hover{
+            &::after{
+                right: 25px;
+            }
+        }
+        &.--header{
+           &:hover{
+                &::after{
+                    right: 10px;
+                }
+           }
+        }
+        &.--category{
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+}

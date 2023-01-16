@@ -1,0 +1,59 @@
+.c-thumbnail{
+    padding: 24px 0;
+    &__content{
+        width: 44.7%;
+        font-family: $font-family-gothic;
+        font-weight: bold;
+        min-width: 370px;
+        padding: 50px 56px 54px 60px;
+        background: #fff;
+        color: #DE1615;
+        font-feature-settings: "palt" 1;
+        position: relative;
+        font-size: (20px / $font-size) * 1rem;
+        line-height: 1.9;
+        cursor: pointer;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+        &.--left{
+            margin-left: 8%;
+        }
+        &.--right{
+            margin-left: 45%;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 6.6%;
+            background: url('./images/create/continute.svg');
+        }
+    }
+}
+@include media-breakpoint-pc-tab{
+    .c-thumbnail{
+        &__content{
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+}
+@include media-breakpoint-sp{
+    .c-thumbnail{
+        padding: 40px 0;
+        &__content{
+            width: 85%;
+            padding: 20px 40px 20px 20px;
+            min-width: unset;
+            &.--left,  &.--right{
+               margin: 0 auto;
+            }
+            &::after{
+                right: 2%;
+            }
+        }
+    }
+}

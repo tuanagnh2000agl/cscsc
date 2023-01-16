@@ -1,0 +1,208 @@
+.c-layout{
+    // three item
+    margin-bottom: 100px;
+    &__list{
+        display: flex;
+        margin: 0 -15px;
+        // --two item
+        &.--two{
+            margin: 0 -20px;
+            .c-layout__item{
+                width: calc(100% / 2);
+                padding: 0 20px;
+            }
+        }
+        // --one item
+        &.--one{
+            margin: 0;
+            .c-layout__item{
+                width: 100%;
+                padding: 0;
+                &__text{
+                    padding: 0 120px;
+                }
+            }
+        }
+        // one row
+        &.--row{
+            flex-direction: column;
+            margin: 0;
+            .c-layout{
+                &__item{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    padding: 0;
+                    margin-bottom: 60px;
+                    &__img, &__content{
+                        width: calc(50% - 20px);
+                        margin: 0;
+                        &.--center{
+                            margin: auto 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__item{
+        width: calc(100% / 3);
+        padding: 0 15px;
+        &__img{
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 26px;
+            background-size: cover;
+            background-position: center;
+            // background layou three item
+            &.--three{
+                background-image: url('./images/temp/dummy.jpg');
+                height: 300px;
+            }
+            // background layou two item
+            &.--tow{
+                background-image: url('./images/temp/dummy1.jpg');
+                height: 300px;
+            }
+            // background layou one item
+            &.--one{
+                background-image: url('./images/temp/dummy1.jpg');
+                height: 500px;
+            }
+            // background layou two item big
+            &.--four{
+                background-image: url('./images/temp/dummy3.jpg');
+                height: 500px;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__text{
+            font-size: ( 16px / $font-size) * 1rem;
+            color: #333333;
+            margin-top: 26px;
+            font-family: $font-family-gothic;
+        }
+        &__title{
+            text-align: center;
+            color: #78C53C;
+            font-weight: 500;
+            font-size: ( 24px / $font-size) * 1rem;
+            &.--left{
+                text-align: left;
+                margin-top: 11px;
+            }
+        }
+      
+    }
+}
+@include media-breakpoint-tab{
+    .c-layout{
+        &__list{
+            &.--one{
+                .c-layout__item__text {
+                    padding: 0 60px;
+                }
+            }
+            &.--row{
+                .c-layout__item__img,
+                .c-layout__item__content{
+                    width: calc(50% - 10px);
+                }
+            }
+        }
+        &__item{
+            &__text{
+                margin-top: 10px;
+            }
+            &__img{
+                // background layou three item
+                &.--three{
+                    height: 260px;
+                }
+                // background layou two item
+                &.--tow{
+                    height: 260px;
+                }
+                // background layou one item
+                &.--one{
+                    height: 440px;
+                }
+                // background layou two item big
+                &.--four{
+                    height: 440px;
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-sp{
+    .c-layout{
+        margin-bottom: 60px;
+        &__list{
+            flex-direction: column;
+            // --two item
+            &.--two{
+                margin: 0;
+                .c-layout__item{
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+             // --one item
+            &.--one{
+                .c-layout__item{
+                    &__text{
+                        padding: 0;
+                    }
+                }
+            }
+             // one row
+            &.--row{
+                .c-layout{
+                    &__item{
+                        flex-direction: column;
+                        &__img, &__content{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        &__item{
+            width: 100%;
+            margin-bottom: 50px;
+            &__img{
+                border-radius: 8px;
+                margin-bottom: 16px;
+                // background layou three item
+                &.--three{
+                    height: 200px;
+                }
+                // background layou two item
+                &.--tow{
+                    height: 200px;
+                }
+                // background layou one item
+                &.--one{
+                    height: 400px;
+                }
+                // background layou two item big
+                &.--four{
+                    height: 400px;
+                }
+            }
+            &__title{
+                &.--left{
+                    text-align: center;
+                }
+            }
+            &__text{
+                margin-top: 15px;          
+            }
+        }   
+    }
+}

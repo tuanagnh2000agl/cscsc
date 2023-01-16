@@ -1,0 +1,199 @@
+.c-model{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 3, 0, 0.6);
+    z-index: 10000;
+    display: none;
+    font-family: $font-family-gothic;
+    font-weight: bold;
+    &__contain{
+        margin: auto;
+        width: 80%;
+        position: relative;
+    }
+    &__info{
+        background: #fff;
+        display: flex;
+        padding: 68px 48px 58px;
+        position: relative;
+    }
+    &__content{
+        width: 44%;
+        padding-right: 29px;
+        &__title{
+            color: #00C4D1;
+            border-bottom: 2px solid #00C4D1;
+            font-size: (20px / $font-size) * 1rem;
+            display: flex;
+            line-height: 1.3;
+            letter-spacing: 0.9px;
+            margin-top: 30px;
+            padding-bottom: 9px;
+            .--title{
+                word-break: break-all;
+            }
+        }
+        &__sentence{
+            font-size: (42px / $font-size) * 1rem;
+            position: relative;
+            display: inline-block;
+            color: #00C4D1;
+            text-align: center;
+            width: 46px;
+            height: 46px;
+            margin-right: 9px;
+            &::before, &::after{
+                content: "";
+                width: 10px;
+                height: 10px;
+                display: block;
+                position: absolute;
+            }
+            &::before{
+                border-top: 1px solid #00C4D1;
+                border-left: 1px solid #00C4D1;
+                top: 6px;left: 0;
+            }
+            &::after{
+                border-bottom: 1px solid #00C4D1;
+                border-right: 1px solid #00C4D1;
+                right: 0;bottom: 0;
+            }
+             
+        }
+        &__text{
+            font-size: (17px / $font-size) * 1rem;
+            margin-top: 17px;
+            color: #231815;
+        }
+    }
+    &__img{
+        width: 56%;
+        position: relative;
+        margin-left: 8px;
+        padding-right: 21px;
+        padding-bottom: 18px;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            z-index: 10;
+            position: relative;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: -66px;
+            right: -5.4%;
+            width: 155px;
+            height: 185px;
+            z-index: 1;
+            background: url('./images/create/icon_cicle.svg') no-repeat;
+        }
+    }
+    &__point{
+        font-size: (28px / $font-size) * 1rem;
+        font-weight: 400;
+        color: #fff;
+        background: #000;
+        line-height: 1;
+        text-align: center;
+        width: 207px;
+        vertical-align: middle;
+        padding: 11px 0;
+        position: absolute;
+        top: 0px;
+        left: -15px;
+        transform: rotate(-7deg);
+        box-shadow: 3px 4px 0 #00C4D1;
+    }
+    &__close{
+        position: absolute;
+        top: -7.7%;
+        right: -2.5%;
+        cursor: pointer;
+        img{
+            width: 22px;
+            height: 22px;
+            object-fit: cover;
+        }
+    }
+}
+@include media-breakpoint-pc-tab{
+    .c-model{
+        &__close{
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+}
+@include media-breakpoint-tab{
+    .c-model{
+        &__info{
+          padding: 50px 30px;  
+          overflow: scroll;
+          max-height: 80vh;
+        }
+        &__point{
+            padding: 5px 0;
+            width: 150px;
+        }
+        &__content{
+            padding-right: 15px;
+        }
+        &__img{
+            padding: 28px 0;
+            margin-left: 0;
+            &::after{
+                bottom: -8%;
+                right: -5%;
+                width: 110px;
+                height: 130px;
+            }
+        }
+    }
+}
+@include media-breakpoint-sp{
+    .c-model{
+       &__info{
+        flex-direction: column;
+        padding: 30px 30px 50px;
+        max-height: 80vh;
+        overflow: scroll;
+       }
+       &__content {
+            width: 100%;
+            padding-right: 0;
+        }
+        &__img{
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            &::after{
+                width: 100px;
+                height: 120px;
+                bottom: -55px;
+                right: -24px;
+            }
+        }
+        &__close img {
+            position: relative;
+            z-index: 10000000;
+        }
+        &__point{
+            width: 140px;
+            padding: 4px 0;
+        }
+    }
+}
+@media only screen and (max-width: 375px) {
+    .c-model{
+        &__info{
+            padding: 30px 25px 50px;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.l-inner {
+	margin: 0 auto;
+	padding: 0 $pd-x-pc;
+	// 1200
+	width: $content-width;
+	max-width: 100%;
+	height: inherit;
+	// 1400
+	&.--wide {
+		width:  $content-width--wide;
+	}
+	// 1000
+	&.--narrow {
+		width:  $content-width--narrow;
+	}
+}
+
+.l-content {
+	padding-top: 100px;
+}
+
+// Phone
+// --------------------------------------------------
+@include media-breakpoint-sp {
+	.l-inner {
+		padding: 0 $pd-x-sp;
+	}
+}
+@include media-breakpoint-tab-sp {
+	.l-content {
+		padding-top: 60px;
+	}
+}

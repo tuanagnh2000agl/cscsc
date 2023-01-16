@@ -1,0 +1,38 @@
+/* link */ 
+
+@include media-breakpoint-pc{
+    a[href^="tel"]{
+        pointer-events: none;
+    }
+}
+.c-link{
+    font-size: ( 16px / $font-size) * 1rem;
+    display: flex;
+    align-items: center;
+    font-family: $font-family-gothic;
+    &__text{
+        color: #333333;
+    }
+    &__icon{
+        margin: 0 5px;
+    }
+    &__click{
+        color: #78C53C;
+        border-bottom: 1px solid #78C53C;
+        margin-right: 6px;
+        line-height: 1;
+    }
+    &__pdf{
+        font-weight: bold;
+        font-size: ( 10px / $font-size) * 1rem;
+	    font-family: 'Zen Maru Gothic', sans-serif;
+        line-height: 1;
+        width: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 14px;
+        color: #fff;
+        background: #FF3C00;
+    }
+}

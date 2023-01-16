@@ -1,0 +1,23 @@
+<%- include('_config', { extend: {
+	relativePath: '.',
+	page: {
+		id: 'not_found',
+		title: 'Coming Soon',
+		description: '福岡市城南区にある松口内科・循環器内科クリニックのWebサイトです。こちらのページは現在制作中です。公開までしばらくお待ちください。',
+	}
+}}); %><%- include('_header'); %>
+					<section class="p-not_found">
+						<div class="l-inner --narrow">
+							<div class="c-heading1">
+								<h2 class="c-heading1__title">Coming Soon</h2>
+							</div>
+							<p class="c-text --center">
+								こちらのページは現在制作中です。<br>
+								公開までしばらくお待ちください。
+							</p>
+							<a href="<%= getRelativePath('/'); %>" class="c-btn --edit">
+								トップページへ戻る
+							</a>
+						</div>
+					</section>
+<%- include('_footer'); %>

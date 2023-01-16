@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">  
+	<title><%= getHeadPageTitle(); %></title>
+	<meta name="description" content="<%= getDescription(); %>">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+	<meta name="format-detection" content="telephone=no,email=no,address=no">
+	<link rel="shortcut icon" href="<%= getRelativePath('/favicon.ico'); %>">
+	<link rel="apple-touch-icon" href="<%= getRelativePath('/apple-touch-icon.png'); %>">
+	<link rel="stylesheet" href="<%= getRelativePath('/css/slick.css'); %>">
+	<link rel="stylesheet" href="<%= getRelativePath('/style.css'); %>">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+</head>
+
+<body class="<%= getBodyClass(); %>">
+	<div id="all">
+		<header class="l-header">
+			<div class="l-header__inner">
+				<div class="l-header__content">
+					<div class="l-header__logo">
+						<h1>
+							<a href="<%= getRelativePath('/'); %>">
+								<img src="<%= getRelativePath('/images/common/logo.svg'); %>" alt="祐徳薬品">
+								<span class="l-header__logo__text">10周年記念サイト</span>
+							</a>
+						</h1>
+					</div>
+					<nav class="l-header__nav">
+						<div class="l-header__nav__inner">
+							<div class="l-header__contents">
+								<ul class="l-header__list">
+									<li class="l-header__list__item">
+										<a href="<%= getRelativePath('/interview'); %>">
+											社長インタビュー
+										</a>
+									</li>
+									<li class="l-header__list__item u-no_link">
+										<a href="<%= getRelativePath('/create'); %>" class="u-no_link">
+											「祐」をつくる
+										</a>
+									</li>
+									<li class="l-header__list__item">
+										<a href="<%= getRelativePath('/kyushu'); %>">
+											「祐」と九州
+										</a>
+									</li>
+									<li class="l-header__list__item">
+										<a href="https://www.yutokuyakuhin.co.jp/guide/" target="_blank">
+											企業情報
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+					<div class="l-menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			</div> 
+		</header>
+		<!-- /#header -->
+		<div class="l-content">
+			<main id="l-primary">
+				<div class="c-mainvisual">
+					<div class="c-mainvisual__item js-mainslick" >
+						<div class="slick-slide" style="background-image: url(<%= getRelativePath('/images/index/mainvisual-slide-1.jpg'); %>);"></div>
+						<div class="slick-slide" style="background-image: url(<%= getRelativePath('/images/index/mainvisual-slide-2.jpg'); %>);"></div>
+						<div class="slick-slide" style="background-image: url(<%= getRelativePath('/images/index/mainvisual-slide-3.jpg'); %>);"></div>
+						<div class="slick-slide" style="background-image: url(<%= getRelativePath('/images/index/mainvisual-slide-4.jpg'); %>);"></div>
+					</div>
+				</div>
+				<article class="l-fiexd <%= getArticleClass(); %>">

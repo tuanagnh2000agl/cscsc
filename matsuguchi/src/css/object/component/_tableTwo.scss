@@ -1,0 +1,55 @@
+.c-tableTwo{
+    font-size: ( 16px / $font-size) * 1rem;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 1px #78c53c;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    th, td {
+        padding: 24.2px;
+        font-weight: 500;
+    }
+    &__content{
+        font-family: $font-family-gothic;
+        color: #333333;
+        line-height: 1;
+        border-bottom: 1px solid #78C53C;
+        border-right: 1px solid #78C53C;
+    }
+    &__heading{
+        border-bottom: 1px solid #fff;
+        border-right: 1px solid #fff;
+        text-align: center;
+        color: #fff;
+        line-height: 1;
+        background: #78C53C;
+        &.column1{
+            width: 29.2%;
+        }
+        &.column2{
+            width: 35.8%;
+        }
+        &.--bdBottom{
+            border-bottom: 1px solid #78C53C;
+        }
+        &.--bdLeft{
+            border-right: 1px solid #78C53C;
+        }
+    }
+}
+@include media-breakpoint-sp{
+    .c-tableTwo{
+        th, td {
+            padding: 15px 5px;
+        }
+        &__content{
+            vertical-align: middle;
+        }
+        &__heading{
+            &.column1,&.column2{
+                width: unset;
+            }
+        }
+    }
+}

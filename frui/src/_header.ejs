@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title><%= getHeadPageTitle(); %></title>
+	<meta name="description" content="<%= getDescription(); %>">
+	<meta property="og:locale" content="ja_JP">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="<%= getSiteUrl(); %>">
+	<meta property="og:title" content="<%= getSiteTitle(); %>">
+	<meta property="og:description" content="<%= getDescription(); %>">
+	<meta property="og:image" content="<%= getSiteUrl(); %>/ogp.jpg">
+	<meta property="og:site_name" content="<%= getSiteTitle(); %>">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<meta name="format-detection" content="telephone=no,email=no,address=no">
+	<link rel="apple-touch-icon" href="<%= getRelativePath('/apple-touch-icon.png'); %>">
+	<link rel="stylesheet" href="<%= getRelativePath('/css/slick.css'); %>">
+	<link rel="stylesheet" href="<%= getRelativePath('/style.css'); %>">
+	<!-- preload -->
+</head>
+<body class="<%= getBodyClass(); %>">
+	<div id="all">
+		<header class="l-header">
+			<div class="l-header__inner">
+				<div class="l-header__content">
+					<div class="l-header__logo">
+						<h1><a href="<%= getRelativePath('/'); %>"><img src="<%= getRelativePath('/images/index/fujinoen.png'); %>" alt="fujinoen"></a></h1>
+					</div>
+					<div class="l-header__contain">
+						<nav class="l-header__nav">
+							<ul class="l-header__list">
+								<li class="l-header__item">
+									<a class="l-header__link" href="<%= getRelativePath('/'); %>">
+										<span class="home is-active">HOME</span>
+									</a>
+								</li>
+								<li class="l-header__item">
+									<a class="l-header__link --facility" href="<%= getRelativePath('/facility/'); %>">
+										<span class="facility">施設案内</span>
+									</a>
+								</li>
+								<li class="l-header__item">
+									<a class="l-header__link --lodging" href="<%= getRelativePath('/lodging/'); %>">
+										<span class="lodging">宿泊</span>
+									</a>
+								</li>
+								<li class="l-header__item">
+									<a class="l-header__link --onsen" href="<%= getRelativePath('/onsen/'); %>">
+										<span class="onsen">温泉</span>
+									</a>
+								</li>
+								<li class="l-header__item">
+									<a class="l-header__link --meal" href="<%= getRelativePath('/meal/'); %>">
+										<span class="meal">お食事</span>
+									</a>
+								</li>
+								<li class="l-header__item">
+									<a class="l-header__link --sightseeing" href="<%= getRelativePath('/sightseeing/'); %>">
+										<span class="sightseeing">周辺観光</span>
+									</a>
+								</li>
+								<li class="l-header__item">
+									<a class="l-header__link" href="<%= getRelativePath('/access/'); %>">
+										<span class="access">アクセス</span>
+									</a>
+								</li>
+							</ul>
+							<!-- sp -->
+							<div class="l-header__menusp u-only__sp u-center">
+								<a class="l-header__menusp__link" href="tel:0925514126" rel="noopener noreferrer"><span class="c-btn"><img class="phone" src="<%= getRelativePath('/image/phone.png'); %>" alt="phone">(092)551-4126</span></a><br>
+								<a class="l-header__menusp__link --edit" href="mailto:info@fujinoen.co.jp"><span class="c-btn"><img class="email" src="<%= getRelativePath('/image/mail.png'); %>" alt="mail">お問い合わせ</span></a>
+								<div class="c-text1 --fs1">
+									<p class="--hours">営業時間 10：00～22：00</p>
+									<p class="--PDF">個人情報保護方針 <span>PDF</span></p>
+									<p class="--All">© FUJINOEN All Rights Reserved</p>
+								</div>
+							</div>
+						</nav>
+						<div class="l-header__contact">
+							<div class="l-header__contact--phone u-only__pc">
+								<a href="tel:0925514126" rel="noopener noreferrer" class="--number">
+									<img src="<%= getRelativePath('/images/index/phone_footer.png'); %>" alt="(092)551-4126"><span>(092)551-4126</span>
+								</a>
+								<a href="mailto:info@fujinoen.co.jp"><span>
+									<img src="<%= getRelativePath('/image/mail.png'); %>" alt="お問い合わせ">お問い合わせ
+								</span></a>
+							</div>
+							<div class="l-header__contact--language">
+								<p class="u-only__pc">
+									<span>営業時間</span><br>
+									<span>10：00～22：00</span>
+								</p>
+								<div>
+									<a class="is-active">日本語</a>/
+									<a>English</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="l-menu__button">
+						<img src="<%= getRelativePath('/image/icon_close.png'); %>" alt="icon close menu" class="is-click1">
+						<img src="<%= getRelativePath('/image/icon_open.png'); %>" alt="icon open menu" class="is-click2">
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- /#header -->
+		<div class="l-content <% if (getPageId() != 'index') { %>u-padding<% } %> ">
+			<main class="l-primary"><% if (getPageId() == 'index') { %>
+				<div class="c-mainvisual">
+					<div class="c-mainvisual">
+						<div class="c-mainvisual__item js-mainslick">
+							<div class="slick-slide" style="background-image: url(<%= getRelativePath('/image/manvisual1.jpg'); %>);">
+								<div class="c-mainvisual__content u-center">
+									<div class="c-mainvisual__content--contain">
+										<p>本物の温泉好きの方へ。</p>
+										<p>源泉完全かけ流し</p>
+									</div>
+									<div class="c-mainvisual__content--text u-center">
+										Free-flowing hot spring. <br>
+									For those who love real hot springs.
+									</div>
+								</div>
+							</div>
+							<div class="slick-slide" style="background-image: url(<%= getRelativePath('/image/manvisual2.jpg'); %>);">
+								<div class="c-mainvisual__content u-center">
+									<div class="c-mainvisual__content--contain">
+										<p>日帰りからご宿泊まで。</p>
+										<p>おひとり様から団体様、</p>
+									</div>
+									<div class="c-mainvisual__content--text u-center">
+										From individuals to groups,<br>
+									From day trips to overnight stays.
+									</div>
+								</div>
+							</div>
+							<div class="slick-slide" style="background-image: url(<%= getRelativePath('/image/manvisual3.jpg'); %>);">
+								<div class="c-mainvisual__content u-center">
+									<div class="c-mainvisual__content--contain">
+										<p>を目指す温泉旅館です。</p>
+										<p>「ご利用しやすい施設」</p>
+									</div>
+									<div class="c-mainvisual__content--text u-center">
+										"Facilities that are easy to use"<br>
+											A hot spring inn that aims to
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><% } %>
+				<article class="<%= getArticleClass(); %>">

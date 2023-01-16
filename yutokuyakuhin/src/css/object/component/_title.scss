@@ -1,0 +1,90 @@
+/* title */ 
+.c-heading1{
+    font-size: (25px / $font-size) * 1rem;
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+    &.--color{
+        color: #575757;
+    }
+    &.--fs1{
+        font-size: (36px / $font-size) * 1rem;
+    }
+    &.--fs2{
+        font-size: (20px / $font-size) * 1rem;
+    }
+    &.--interview,&.--tasuku,&.--create{
+        font-family: 'Allura', cursive;
+        position: relative;
+        display: inline-block;
+        &::after{
+            font-weight: 400;
+            position: absolute;
+            color: #CACAC4;
+            transform: rotate(-15deg);
+        }
+    }
+    &.--interview{
+        &::after{
+            content: "Interview";
+            bottom: 4px;
+            right: -29px;
+            transform: rotate(-15deg);
+            font-size: (25px / $font-size) * 1rem;
+        }
+    }
+    &.--tasuku{
+        &::after{
+            content: "Making Tasuku";
+            bottom: -15px;
+            right: -86px;
+            transform: rotate(-15deg);
+            font-size: (27px / $font-size) * 1rem;
+        }
+    }
+    &.--create{
+        &::after{
+            content: "Tasuku × Kyushu";
+            bottom: -13px;
+            right: -110px;
+            font-size: (27px / $font-size) * 1rem;
+        }
+    }
+}
+
+@include media-breakpoint-sp{
+    .c-heading1{
+        &.--tasuku{
+            &::after{
+                bottom: -25px;
+                right: -20%;
+            }
+        }
+        &.--create{
+            &::after{
+                bottom: -24px;
+                right: -24%;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 375px){
+    .c-heading1{
+        &.--interview{
+            &::after{
+                bottom: -15px;
+                right: 0px;
+            }
+        }
+        &.--tasuku{
+            &::after{
+                bottom: -28px;
+                right: -7%;
+            }
+        }
+        &.--create{
+            &::after{
+                right: -20%;
+            }
+        }
+    }
+}

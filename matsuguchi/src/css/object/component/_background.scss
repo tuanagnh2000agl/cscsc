@@ -1,0 +1,41 @@
+.c-background{
+    height: 1100px;
+    background: #FAFFF0;
+    position: relative;
+    &::before,&::after{
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100px;
+    }
+    &::before{
+        background-image: url('./images/common/background01_top.png');
+        background-position: top;
+        top: -99px;
+    }
+    &::after{
+        content: "";
+        background-image: url('./images/common/background01_bottom.png');
+        background-position: bottom;
+        bottom: -99px;
+    }
+}
+@include media-breakpoint-sp{
+    .c-background{
+        height: 800px;
+        &::before,&::after{
+            height: 50px;
+        }
+        &::before{
+            background-image: url('./images/common/background01_top_sp.png');
+            top: -49px;
+        }
+        &::after{
+            content: "";
+            background-image: url('./images/common/background01_bottom_sp.png');
+            bottom: -49px;
+        }
+    }
+}

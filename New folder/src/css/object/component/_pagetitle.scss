@@ -1,0 +1,42 @@
+/* pagetitle */ 
+
+.c-pagetitle {
+    position: relative;
+    &__image {
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: #b8b8b8 no-repeat center center;
+        background-size: cover;
+    }
+    &__heading {
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: (30px / $font-size) * 1rem;
+        color: $brand-color;
+    }
+}
+
+// 2ndpage mainimg
+body.not_found {
+    .c-pagetitle {
+        &__image{
+            background-image: url(./images/common/img_pagetitle.jpg);
+        }
+    }
+}
+
+@include media-breakpoint-tab-sp{
+    .c-pagetitle {
+        &__heading {
+            height: 180px;
+            font-size: (28px / $font-size) * 1rem;
+        }
+    }
+}

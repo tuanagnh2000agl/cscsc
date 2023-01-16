@@ -1,0 +1,38 @@
+.l-footer {
+	&__inner {
+		width: 100%;
+		margin: 0 auto;
+	}
+	&__contents {
+		text-align: center;
+	}
+	&__logo{
+		text-align: center;
+		img{
+			width: 285px;
+			height: 62px;
+			object-fit: cover;
+		}
+	}
+	&__info{
+		font-size: ( 14px / $font-size) * 1rem;
+		line-height: 1.4;
+		margin-left: -12px;
+		margin-bottom: 17px;
+		padding: 0 20px;
+	}
+	&__copyright {
+		font-size: ( 12px / $font-size) * 1rem;
+		background: #E6E6E6;
+		padding: 14px 20px 9px;
+	}
+}
+
+
+// Desktop
+// --------------------------------------------------
+@include media-breakpoint-pc {
+	.l-footer {
+		padding-left: 258px;
+	}
+}

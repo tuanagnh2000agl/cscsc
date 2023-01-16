@@ -1,0 +1,41 @@
+/* pagetop */ 
+
+.c-pagetop {
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+    font-size: ( 14px / $font-size) * 1rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid  #78C53C;
+    color: #78C53C;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    img{
+        width: 12px;
+        height: 10px;
+        object-fit: cover;
+        margin-bottom: 5px;
+    }
+    span{
+        line-height: 1;
+    }
+}
+@include media-breakpoint-pc-tab{
+    .c-pagetop {
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+}
+@include media-breakpoint-sp{
+    .c-pagetop {
+        width: 44px;
+        height: 44px;
+    }
+}

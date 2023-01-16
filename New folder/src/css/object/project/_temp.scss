@@ -1,0 +1,45 @@
+.p-temp{
+    &__box{
+        margin-top: 100px;
+        .c-box{
+            &:first-child{
+                margin-bottom: 50px;
+            }
+        }
+    }
+    &__link{
+        margin-top: 100px;
+        .c-link{
+            margin-bottom: 20px;
+        }
+    }
+    &__btn{
+        margin-top: 100px;
+        &__list{
+            display: flex;
+        }
+        .c-btnTwo{
+            margin-bottom: 20px;
+            margin-right: 20px;
+        }
+    }
+    &__anchor{
+        margin-top: 100px;
+    }
+    &__pager{
+        margin-top: 100px;
+    }
+    &__list{
+        margin-top: 100px;
+        .c-list{
+            &:not(:last-child){
+                margin-bottom: 100px;
+            }
+        }
+    }
+    &__table{
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    
+}

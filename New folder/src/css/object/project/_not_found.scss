@@ -1,0 +1,15 @@
+// not_found
+.p-not_found{
+    .c-text{
+        margin-bottom: 4em;
+    }
+    .c-btn{
+        margin-bottom: 6em;
+    }
+}
+@include media-breakpoint-sp{
+    .p-not_found{
+        
+        
+    }
+}

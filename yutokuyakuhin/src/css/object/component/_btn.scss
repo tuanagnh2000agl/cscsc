@@ -1,0 +1,112 @@
+/* btn */ 
+.c-btn {
+    font-size: (16px / $font-size) * 1rem;
+    border: 1px solid #E30000;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #E30000; 
+    font-weight: 500;
+    display: inline-flex;
+    width: 90%;
+    max-width: 215px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    padding: 2px 0;
+    position: relative;
+    transition: 0.3s all;
+    &::after{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        right: 6px;
+        border-style: solid;
+        border-width: 5px 0 5px 8px;
+        border-color: transparent transparent transparent #E30000;
+    }
+    &.--white{
+        color: #fff;
+        border: 1px solid #fff;
+        max-width: 173px;
+        &::after{
+            border-left-color: #fff;
+        }
+    }
+    &.--red{
+        max-width: 173px;
+    }
+    &.--grey{
+        color: #6F6F6F;
+        border: 1px solid #6F6F6F;
+        font-size: (17px / $font-size) * 1rem;
+        padding: 4px 0;
+        max-width: 241px;
+        letter-spacing: 2.4px;
+        &::after{
+            content: "";
+            right: 9px;
+            border-color: transparent transparent transparent #6F6F6F;
+        }
+    }
+   
+    &Title{
+        display: inline-block;
+        position: relative;
+        transition: 0.3s all;
+        &::after{
+            content: "";
+            background: #fff;
+            width: 217px;
+            height: 37px;
+            display: inline-block;
+            line-height: 48px;
+            text-align: center;
+            position: absolute;
+            bottom: -4px;
+            right: -4px;
+            clip-path: polygon(3% 0, 80% 0%, 100% 0, 100% 86%, 97% 100%, 0 100%, 0 100%, 0 19%);
+        }
+        &__link{
+            background: #6F6F6F;
+            width: 217px;
+            height: 37px;
+            display: block;
+            line-height: 50px;
+            text-align: center;
+            position: relative;
+            z-index: 100;
+            clip-path: polygon(3% 0, 80% 0%, 100% 0, 100% 86%, 97% 100%, 0 100%, 0 100%, 0 19%);
+            &::after{
+                content: "｢祐｣ BACKNUMBER";
+                background: #E5E5E4;
+                font-size: (16px / $font-size) * 1rem;
+                font-weight: 500;
+                width: 215px;
+                letter-spacing: 1.6px;
+                color: #6F6F6F;
+                height: 35px;
+                display: inline-block;
+                line-height: 33px;
+                text-align: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                clip-path: polygon(3% 0, 80% 0%, 100% 0, 100% 86%, 97% 100%, 0 100%, 0 100%, 0 19%);
+            }
+        }
+    }
+}
+
+
+
+// Desktop + Tablet
+// --------------------------------------------------
+@include media-breakpoint-pc-tab {
+    .c-btn {
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+}

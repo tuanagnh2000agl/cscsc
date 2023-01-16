@@ -1,0 +1,63 @@
+.c-background{
+    width: 100%;
+    padding-bottom: 42.4%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &__contain{
+        margin-top: 27px;
+        margin-left: 52px;
+        display: inline-block;
+        &.--magrin{
+            margin-top: 32px;
+        }
+        &__img1{
+            margin-bottom: 33px;
+            width: 200px;
+            height: auto;
+            margin-left: 6px;
+            object-fit: cover;
+            display: block;
+        }
+        &__img2{
+            margin-bottom: 33px;
+            display: block;
+            width: 190px;
+            height: auto;
+            margin-left: 6px;
+            object-fit: cover;
+        }
+    }
+    &.--color{
+        background-color: #DBDBDB;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 37.3%;
+        background-position: 19px -135px;
+    }
+    &__img{
+        position: absolute;
+    }
+}
+@include media-breakpoint-sp{
+    .c-background{
+        background-position: center;
+        padding-bottom: 0;
+        &__contain{
+            margin: 0;
+            display: block;
+            text-align: center;
+            padding: 21% 0 21%;
+            &__img1, &__img2{
+                margin: 0 auto 15px;
+            }
+            &.--magrin {
+                 margin-top: 0; 
+            }
+        }
+        &.--color{
+            background-position: center;
+            padding-bottom: 0;
+        }
+    }
+}

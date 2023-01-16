@@ -1,0 +1,16 @@
+/* hover */ 
+
+.u-hover-opacity {
+    transition: 0.3s all;
+    opacity: 1;
+	&:hover{
+		opacity: 0.7;
+	}
+}
+
+.u-no_link{
+	pointer-events: none;
+	&:hover{
+		opacity: 1;
+	}
+}

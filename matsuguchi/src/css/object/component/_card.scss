@@ -1,0 +1,200 @@
+.c-card{
+    &__list{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 28px;
+    }
+    &__item{
+        box-shadow: 0 0 2px rgba(0, 0, 0,  0.2);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 24px 28px 24px 30px;
+        .c-heading{
+            text-align: center;
+        }
+        &.--edit{
+            box-shadow: unset;
+            padding: 0;
+            display: block;
+        }
+    }
+    &__img{
+        border-radius: 10px;
+        overflow: hidden;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 300px;
+        &.--one{
+            background-image: url('./images/index/images_clinic1.jpg');
+        }
+        &.--two{
+            background-image: url('./images/index/images_clinic2.jpg');
+        }
+        &.--three{
+            background-image: url('./images/index/images_clinic3.jpg');
+        }
+    }
+    &__content{
+        color: #333333;
+        font-size: ( 16px / $font-size) * 1rem;
+        font-family: $font-family-gothic;
+    }
+    &__heading{
+        font-size: ( 24px / $font-size) * 1rem;
+        color: #333333;
+        text-align: center;
+        font-weight: 500;
+        letter-spacing: 2.2px;
+    }
+    &__title{
+        font-size: ( 24px / $font-size) * 1rem;
+        color: #78C53C;
+        margin-top: 29px;
+        display: flex;
+        letter-spacing: 2px;
+        align-items: center;
+        margin-bottom: 21px;
+        span{
+            width: 40px;
+            height: 40px;
+            display: flex;
+            line-height: 1;
+            justify-content: center;
+            align-items: center;
+            background: #78C53C;
+            color: #fff;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+    }
+    &__icon{
+        text-align: center;
+        height: 76px;
+        .--img1{
+            width: 50px;
+            height: 60px;
+        }
+        .--img2{
+            width: 72px;
+            height: 72px;
+        }
+        .--img3{
+            width: 74px;
+            height: 50px;
+        }
+        .--img4{
+            width: 60px;
+            height: 60px;
+        }
+    }
+    &__btn{
+        margin-top: 14px;
+        &__link{
+            display: block;
+            padding: 20px 0;
+            max-width: 300px;
+            width: 100%;
+            line-height: 1;
+            text-align: center;
+            color: #78C53C;
+            font-size: ( 18px / $font-size) * 1rem;
+            border: 1px solid #78C53C;
+            position: relative;
+            border-radius: 50px;
+            &::after{
+                content: "";
+                transition: all 0.2s linear;
+                position: absolute;
+                top: 50%;
+                right: 34px;
+                display: inline-block;
+                transform: translateY(-50%);
+                background: url('./images/index/icon_right.svg') no-repeat center/cover;
+                width: 10px;
+                height: 12px;
+            }
+        }
+    }
+}
+@include media-breakpoint-tab-sp{
+    .c-card{
+        &__list{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+@include media-breakpoint-sp{
+    .c-card{
+        &__list{
+            grid-template-columns: 1fr;
+        }
+        &__title{
+            justify-content: center;
+            font-size: ( 22px / $font-size) * 1rem;
+            margin-top: 17px;
+            margin-bottom: 17px;
+            span{
+                width: 38px;
+                height: 38px;
+                margin-right: 10px;
+                padding-bottom: 3px;
+            }
+        }
+        &__item{
+            padding: 19px 16px 14px 15px;
+            &.--edit{
+                margin-bottom: 12px;
+            }
+        }
+        &__heading{
+            font-size: ( 22px / $font-size) * 1rem;
+            margin-bottom: 5px;
+        }
+        &__img{
+            height: 200px;
+        }
+        &__content{
+            font-feature-settings: "palt" 1;
+            &.--sp{
+                line-height: 1.6;
+                font-size: ( 15px / $font-size) * 1rem;
+            }
+        }
+        &__btn{
+            .c-btn.--edit{
+                padding: 16px 0;
+            }
+        }
+        &__icon{
+            text-align: center;
+            height: 62px;
+            .--img1{
+                width: 41px;
+                height: 50px;
+                &.--sp{
+                    width: 35px;
+                    height: 50px;
+                }
+            }
+            .--img2{
+                width: 60px;
+                height: 60px;
+            }
+            .--img3{
+                width: 58px;
+                height: 40px;
+            }
+            .--img4{
+                width: 60px;
+                height: 60px;
+                &.--sp{
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+}

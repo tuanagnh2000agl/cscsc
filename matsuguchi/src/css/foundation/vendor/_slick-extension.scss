@@ -1,0 +1,144 @@
+.slider img {
+    width:100%;/*スライダー内の画像を横幅100%に*/
+    height:auto;
+}
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+.slider .slick-slide {
+    height: unset;
+    margin:0 15px;/*スライド左右の余白調整*/
+}
+.c-slider{
+    &__item{
+        border-radius: 10px;
+        overflow: hidden;
+    }
+}
+// manvisual
+.slick-slide {
+    width: 100%;
+    z-index: 1;
+    background: center center no-repeat;
+    background-size: cover;
+}
+
+.c-mainvisual__item .slick-list {
+    border-radius: 0 0 0 20px;
+}
+
+.slick-arrow {
+    // reset
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    color: transparent;
+    text-decoration: none;
+    background-color: transparent;
+    outline: none;
+    z-index: 2;
+    cursor: pointer;
+    
+    // dezain
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #000;
+
+    // position 
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slick-dots {
+    position: absolute;
+    transform: translateY(50%);
+    display: flex;
+    flex-direction: column;
+    bottom: 22%;
+    left: -67.4px;
+    li {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin: 5px 0;
+        position: relative;
+        cursor: pointer;
+        button {
+            // reset
+            display: block; 
+            background: transparent;
+            width: 100%;
+            height: 100%;
+            outline: none;
+            font-size: 0;
+            border: none;
+            color: transparent;
+            cursor: pointer;
+            padding: 5px;
+        }
+        &::before {
+            content: "";
+            cursor: pointer;
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #AFAFAF;
+            border: 2px solid #AFAFAF;
+        }
+
+        &.slick-active {
+            &::before {
+                background: #78C53C;
+                border: 2px solid #78C53C;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-tab-sp{
+    .slick-dots {
+        bottom: 40%;
+    }
+}
+@media only screen and (max-width: 1200px) and (min-width: 960px){
+    .slick-dots {
+        bottom: 30%;
+    }
+}
+@include media-breakpoint-tab-sp{
+    .slick-dots {
+        left: -50px;
+    }
+}
+@include media-breakpoint-sp{
+    .slick-dots {
+        bottom: calc( 35.4% + 30px);
+        left: -22px;
+        li {
+            width: 5px;
+            height: 5px;
+            margin: 7.3px 0;
+            &::before{
+                width: 5px;
+                height: 5px;
+            }
+        }
+    }
+}
+@include media-breakpoint-pc-tab{
+    .slick-dots {
+        li {
+            cursor: pointer;
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+}

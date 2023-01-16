@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 155.51 185.9">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-4 {
+        fill: #00c4d1;
+      }
+
+      .cls-3 {
+        stroke: #00c4d1;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: .8px;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-2" width="155.51" height="185.9"/>
+    </clipPath>
+  </defs>
+  <g id="POPUP">
+    <g class="cls-1">
+      <polygon class="cls-3" points="114.64 28.7 52.44 28.7 21.35 82.56 52.44 136.43 114.64 136.43 145.74 82.56 114.64 28.7"/>
+      <polygon class="cls-4" points="135.87 141.2 128.98 115.51 103.3 108.63 84.5 127.43 91.38 153.11 117.06 160 135.87 141.2"/>
+    </g>
+  </g>
+</svg>

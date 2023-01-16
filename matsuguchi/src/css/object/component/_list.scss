@@ -1,0 +1,53 @@
+/* list */
+.c-list{
+    color: #333333;
+    font-size: ( 16px / $font-size) * 1rem;
+    font-family: $font-family-gothic;
+    margin-bottom: 50px;
+    &__item{
+        position: relative;
+        padding-left: 20px;
+        letter-spacing: 1.5px;
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #78C53C;
+        }
+        &.--custom{
+            padding-left: 0;
+            &::before{
+                display: none;
+            }
+
+        }
+    }
+    &__sentence{
+        font-size: ( 14px / $font-size) * 1rem;
+        color: #fff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+	    font-family: 'Zen Maru Gothic', sans-serif;
+        line-height: 1;
+        width: 20px;
+        padding-left: 3px;
+        padding-bottom: 2px;
+        height: 20px;
+        border-radius: 50%;
+        background: #78C53C;
+        margin-right: 14px;
+    }
+     &__title{
+        font-family: 'Zen Maru Gothic', sans-serif;
+        letter-spacing: 0.8px;
+    }
+    &__content{
+        letter-spacing: 1.5px;
+    }
+}

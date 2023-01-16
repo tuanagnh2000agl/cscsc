@@ -1,0 +1,267 @@
+.c-popup{
+    &__list{
+        padding: 0 18px 0 18px;
+        display: grid;
+        gap: 44px 40px;
+        padding: 0 40px;
+        margin: 0 10px;
+        overflow: hidden;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        &.--edit{
+            gap: 103px 40px;
+        }
+    }
+    &__banner{
+        grid-template-columns: 41.9% 1fr 1fr 1fr;
+        display: grid;
+        gap: 93px 40px;
+        &.--reverse{
+            gap: 101px 50px;
+            grid-template-columns: 1fr 1fr 1fr 39.8%;
+        }
+    }
+    &__link{
+        &>* {
+            transition: 0.3s all;
+        }
+    }
+    &__item {
+        position: relative;
+        &.--first{
+            grid-row: 1/3;
+            padding-bottom: 16px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &.--last{
+            grid-column: -2/-1;
+            grid-row: 1/3;
+            padding-bottom: 7px;
+            margin-left: -13px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    &__shelf{
+        box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
+        &.--noBoxshadow{
+            box-shadow: unset;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    &__border{
+        position: absolute;
+        left: -40px;
+        pointer-events: none;
+        height: 16px;
+        background: #fff;
+        z-index: 1;
+        width: 1140px;
+        opacity: 0;
+        max-width: calc(100vw - 60px);
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            left: 0;
+            height: 35px;
+            background-size: 100% 100%;
+        }
+        &::before {
+            bottom: 100%;
+            background-repeat: no-repeat;
+            background-image: url("./images/common/bg-top.png");
+        }
+        &::after {
+            top: 100%;
+            background-repeat: no-repeat;
+            background-image: url("./images/common/shelf-shadow-bot_1.png");
+        }
+    }
+    &__info{
+        margin-top: 26px;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        &.--edit{
+            margin-top: 6px;
+        }
+        span{
+            display: block;
+            line-height: 1.3;
+            letter-spacing: 0.3px;
+            color: #3D3D3D;
+            &.--color{
+                color: #6F6F6F;
+            }
+        }
+    }
+    &__date{
+        font-size: (7px / $font-size) * 1rem;
+    }
+    &__no{
+        font-weight: 500;
+        font-size: (8px / $font-size) * 1rem;
+    }
+}
+
+@include media-breakpoint-pc{
+    .c-popup{
+        &__border{
+            max-width: calc(100vw - 258px - 60px );
+        }
+        &__item{
+            &:nth-child(1),
+            &:nth-child(6),
+            &:nth-child(11),
+            &:nth-child(16) {
+                .c-popup__border {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-pc-tab{
+	.c-popup{
+		&__item{
+            &:hover{
+                .c-popup__shelf,
+                .c-popup__info {
+                    opacity: 0.7;
+                }
+            }
+		}
+	}
+}
+@include media-breakpoint-tab{
+    .c-popup{
+        &__list{
+            gap: 44px 30px;
+            grid-template-columns: 1fr 1fr 1fr;
+            &.--edit {
+                gap: 44px 30px;
+                padding: 0;
+            }
+        }
+        // page create
+        &__banner{
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 44px 30px;
+            &.--reverse{
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 44px 30px;
+                padding-right: 0;
+                padding-left: 0;
+            }
+        }
+        // end
+        &__item {
+            // page create
+            &.--first{
+                grid-column: 1/4;
+                margin-right: 0;
+                padding-bottom: 0;
+            }
+            &.--last{
+                grid-column: 1/4;
+                margin-left: 0;
+                padding-bottom: 0;
+            }
+            // end
+            &:nth-child(1),
+            &:nth-child(4),
+            &:nth-child(7),
+            &:nth-child(10),
+            &:nth-child(13),
+            &:nth-child(16),
+            &:nth-child(19)
+            {
+                .c-popup__border {
+                    opacity: 1;
+                }
+            }
+            &:nth-child(6),
+            &:nth-child(11)
+            {
+                .c-popup__border {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-sp{
+    .c-popup{
+        &__list{
+            gap: 20px;
+            grid-template-columns: 1fr 1fr;
+            padding: 0 20px;
+            &.--edit {
+                gap: 20px;
+                padding: 0;
+                margin: 0;
+            }
+        }
+        // page create
+        &__banner{
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            &.--reverse{
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+        }
+        // end
+        &__item {
+            // page create
+            &.--first{
+                grid-column: 1/3;
+                margin-right: 0;
+                padding-bottom: 0;
+            }
+            &.--last{
+                grid-column: 1/3;
+                margin-left: 0;
+                padding-bottom: 0;
+            }
+            // end
+
+            &:nth-child(1),
+            &:nth-child(3),
+            &:nth-child(5),
+            &:nth-child(7),
+            &:nth-child(9),
+            &:nth-child(11),
+            &:nth-child(13),
+            &:nth-child(15),
+            &:nth-child(17),
+            &:nth-child(19)
+            {
+                .c-popup__border {
+                    opacity: 1;
+                    left: -20px;
+                    max-width: calc(100vw - 52px);
+                }
+            }
+
+            &:nth-child(4),
+            &:nth-child(10),
+            &:nth-child(16)
+            {
+                .c-popup__border {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}

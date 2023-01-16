@@ -1,0 +1,112 @@
+.c-pager{
+    &__contain{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 50px;
+    }
+    &__btn{
+        border: 1px solid #78C53C;
+        border-radius: 30px;
+        background: #fff;
+        max-width: 300px;
+        width: 100%;
+        a{
+            line-height: 1;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            color: #78C53C;
+            justify-content: center;
+            position: relative;
+            font-size: ( 18px / $font-size) * 1rem;
+            &.--reverse{
+                &::after{
+                    left: 30px;
+                    background: url('./images/common/icon_left.svg') no-repeat center/cover;
+                }
+            }
+            &::after{
+                content: "";
+                transition: all 0.2s linear;
+                position: absolute;
+                top: 50%;
+                right: 30px;
+                display: inline-block;
+                transform: translateY(-50%);
+                background: url('./images/common/icon_right.svg') no-repeat center/cover;
+                width: 10px;
+                height: 12px;
+            }
+        }
+    }
+    &__page{
+        display: flex;
+        justify-content: space-between;
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            border-radius: 50%;
+            border: 1px solid #78C53C;
+            color: #78C53C;
+            font-size: ( 18px / $font-size) * 1rem;
+            width: 60px;
+            height: 60px;
+            margin: 0 10px;
+            transition: all 0.2s linear;
+            &.--active{
+                color: #fff;
+                background: #78C53C;
+                cursor: default;
+            }
+            span{
+                line-height: 1;
+            }
+        }
+    }
+}
+@include media-breakpoint-sp{
+    .c-pager{
+        &__btn{
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            a{
+                span{
+                    display: none;
+                }
+                &::after{
+                    right: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-pc-tab {
+    .c-pager {
+        &__btn{
+            a{
+                &:hover{
+                    &::after{
+                        right: 15px;
+                    }
+                    &.--reverse{
+                        &::after{
+                            left: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        &__page{
+            a{
+                &:hover{
+                    color: #fff;
+                    background: #78C53C;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+				</article>
+				<!-- /.<%= getArticleClass('.'); %> -->
+			</main>
+			<!-- /#primary -->
+		</div>
+		<!-- /#content -->
+		<footer class="l-footer"  id="is-footer">
+			<div class="c-pagetop" id="is-backtop">
+				<a class="u-only__pc" href="<%= getRelativePath('/'); %>"><img src="<%= getRelativePath('/images/index/calendar.png'); %>" alt="calendar"><span>予約方法</span></a><br>
+				<a id="is-backtop" href="<%= getRelativePath('/'); %>"><img src="<%= getRelativePath('/images/index/one.png'); %>" alt="calendar"><span class="u-only__pc">上に戻る</span></a>
+			</div>
+			<div class="c-fixed u-only__sp" id="is-tabbar">
+				<a class="c-fixed__link" href="tel:0925514126"><img src="<%= getRelativePath('/images/index/phone_fixed.png'); %>" alt="0925514126"> <span>電話</span></a>
+				<a class="c-fixed__link" href="<%= getRelativePath('/'); %>"><img src="<%= getRelativePath('/images/index/calendar_fixed.png'); %>" alt="予約方法"> <span>予約方法</span></a>
+				<a class="c-fixed__link" href="<%= getRelativePath('/'); %>"><img src="<%= getRelativePath('/images/index/location_fixed.png'); %>" alt="アクセス"> <span>アクセス</span></a>
+			</div>
+			<div class="l-footer__contain">
+				<div class="l-footer__logo u-center">
+					<a href="<%= getRelativePath('/'); %>"><img src="<%= getRelativePath('/images/index/logo_footer.png'); %>" alt="fujinoen"></a>
+				</div>
+				<p class="l-footer__contact">お問い合わせはこちらから</p>
+				<div class="u-center">
+					<a href="tel:0925514126" rel="noopener noreferrer" class="c-btn --white"><img src="<%= getRelativePath('/images/index/phone_footer.png'); %>" alt="お知らせ一覧"><span>(092)551-4126</span></a>
+					<a href="mailto:info@fujinoen.co.jp" rel="noopener noreferrer" class="c-btn --white c-btn__size"><img src="<%= getRelativePath('/images/index/mail_footer.png'); %>" alt="お知らせ一覧"><span>お問い合わせ</span></a>
+				</div>
+				<div class="l-footer__info">
+					<address class="l-footer__infoContact">
+						T811-1344 <br class="u-only__sp">福岡県福岡市南区三宅3丁目19番7号<br>
+						<span class="c-text1 --bold">営業時間</span> | 10：00～22：00（21:30受付終了）<br>
+						<span class="c-text1 --bold">定休日</span> | 毎週火曜日 <br class="u-only__sp">（16時～22時までは温泉入浴のみ営業）<br>
+						<span class="c-text1 --bold">TEL</span> | <a href="tel:0925514126" rel="noopener noreferrer">(092)551-4126</a> <br>
+						<span class="c-text1 --bold">FAX</span> | <a href="tel:0925518445" rel="noopener noreferrer">(092)551-8445</a> <br>
+						<span class="c-text1 --bold">E-MAIL</span> | <a href="mailto:info@fujinoen.co.jp" rel="noopener noreferrer">info@fujinoen.co.jp</a>
+					</address>
+					<div class="l-footer__infoMenu">
+						<ul>
+							<li><a href="<%= getRelativePath('/'); %>">HOME</a></li>
+							<li><a href="<%= getRelativePath('/'); %>">お知らせ</a></li>
+							<li><a href="<%= getRelativePath('/'); %>">施設案内</a></li>
+							<li><a href="<%= getRelativePath('/'); %>">宿泊</a></li>
+							<li><a href="<%= getRelativePath('/'); %>">温泉</a></li>
+							<li><a href="<%= getRelativePath('/'); %>">お食事</a></li>
+							<li><a href="<%= getRelativePath('/'); %>">周辺観光</a></li>
+							<li><a href="<%= getRelativePath('/'); %>">アクセス</a></li>
+							<li><a href="<%= getRelativePath('/'); %>">お問い合わせ</a></li>
+							<li><a href="<%= getRelativePath('/'); %>">個人情報保護方針</a> <span class="c-btnNew">PDF</span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="l-footer__coppy u-center">
+					© FUJINOEN All Rights Reserved
+				</div>
+			</div>
+		</footer>
+		<!-- /#footer -->
+	</div>
+	<!-- /#all -->
+	<script>
+		(function(d) {
+		  var config = {
+			kitId: 'qlz6fev',
+			scriptTimeout: 3000,
+			async: true
+		  },
+		  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+		})(document);
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="<%= getRelativePath('/js/script.js'); %>"></script>
+	<% if(getPageId() == 'index') { %>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="<%= getRelativePath('/js/index.js'); %>"></script>
+	<% } %>
+</body>
+</html>

@@ -1,0 +1,34 @@
+.u-bg{
+    background: $blue;
+    color: #fff;
+}
+.u-red{
+    color: $red;
+}
+.u-bbottom{
+    border-bottom: 1px solid #fff;
+}
+.u-right{
+    border-right: 1px solid #fff;
+}
+
+.u-bbottom1{
+    border-bottom: 1px solid $blue;
+}
+.u-right1{
+    border-right: 1px solid $blue;
+}
+.u-left{
+    border-left: 1px solid $blue;
+}
+.u-textColor{
+    color: #333333;
+}
+.u-titleColor{
+    color: #003C78;
+}
+.u-red {
+    .c-heading1{
+        color: #C82310 !important;
+    }
+}

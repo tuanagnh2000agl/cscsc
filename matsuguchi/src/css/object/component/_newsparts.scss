@@ -1,0 +1,100 @@
+/* newsparts */ 
+
+.c-news {
+    &__list{
+        display: none;
+        &.--active{
+            display: block;
+        }
+    }
+    &__link{
+        display: flex;
+        border-top: 1px solid #AFAFAF;
+        margin: 0 20px;
+        line-height: 1;
+        padding: 21.4px 0 21.4px 50px;
+        width: 100%;
+        font-size: ( 16px / $font-size) * 1rem;
+        &:last-child{
+            border-bottom: 1px solid #AFAFAF;
+        }
+        &__contain{
+            display: flex;
+            width: 26%;
+        }
+        &__date{
+            width: 57%;
+            font-family: $font-family-gothic;
+            color: #333333;
+        }
+        &__cat{
+            width: 43%;
+            font-size: ( 14px / $font-size) * 1rem;
+            color: #78C53C;
+        }
+        &__title{
+            width: 52.8%;
+            font-family: $font-family-gothic;
+            color: #333333;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        &__new{
+            width: 7%;
+            color: #FFDA4D;
+            margin-top: -2px;
+        }
+    }
+}
+@media only screen and (max-width: 1023px) {
+    .c-news {
+        &__link{
+            padding-left: 20px;
+        }
+    }
+    
+}
+@include media-breakpoint-tab-sp{
+    .c-news{
+        &__link{
+            margin: 0;
+        }
+    }
+}
+@include media-breakpoint-sp{
+    .c-news{
+        &__link{
+            flex-direction: column;
+            padding: 20px 13px 20px 19px;
+            &__contain {
+                width: 100%;
+                margin-bottom: 14px;
+            }
+            &__date, &__cat, &__new{
+                width: unset;
+                margin-right: 19px;
+            }
+            &__title{
+                width: 100%;
+            }
+            &__new{
+                font-size: ( 14px / $font-size) * 1rem;
+            }
+        }
+
+    }
+}
+// Desktop + Tablet
+// --------------------------------------------------
+@include media-breakpoint-pc-tab {
+    .c-news {
+        &__link {
+            transition: 0.3s all;
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+}

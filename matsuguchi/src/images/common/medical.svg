@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.49 25">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #8ec43c;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <g id="Design">
+    <g id="icon_data" data-name="icon data">
+      <path class="cls-1" d="M2.51,.5H.5V8.55c0,3.34,2.7,6.04,6.04,6.04s6.04-2.7,6.04-6.04V.5h-2.01"/>
+      <path class="cls-1" d="M6.54,14.59v2.23c-.12,4.12,3.11,7.55,7.23,7.68,4.12,.12,7.55-3.11,7.68-7.23,0-.15,0-.3,0-.45v-6.25"/>
+      <circle class="cls-1" cx="21.3" cy="7.88" r="2.68"/>
+    </g>
+  </g>
+</svg>

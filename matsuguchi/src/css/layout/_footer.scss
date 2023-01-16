@@ -1,0 +1,277 @@
+.l-footer {
+	&__inner {
+		width: 100%;
+		margin: 0 auto;
+		background:  #78C53C;
+	}
+	&__logo{
+		text-align: center;
+		padding: 45px 0 42px;
+		&__link{
+			display: inline-block;
+			color: #fff;
+			transition: .3s all;
+			span{
+				font-size: ( 22px / $font-size) * 1rem;
+				margin-left: 5px;
+			}
+			img{
+				width: 50px;
+				height: 43px;
+				object-fit: cover;
+			}
+		}
+	}
+	&__contents {
+		max-width:  960px;
+		width: 92%;
+		margin: 0 auto;
+	}
+	&__directional{
+		display: flex;
+		width: 100%;
+	}
+	&__menu{
+		width: 70%;
+		&__list{
+			display: flex;
+			justify-content: space-between;
+		}
+		&__item{
+			&.--edit{
+				display: flex;
+				flex-direction: column;
+				position: relative;
+			}
+		}
+		&__icon{
+			position: absolute;
+			right: 10%;
+			top: 7px;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 20px;
+			height: 20px;
+			img{
+				transition: all 0.2s linear;
+			}
+		}
+		&__link{
+			font-size: ( 18px / $font-size) * 1rem;
+			color: #fff;
+			padding: 0 5px;
+			&.--pc{
+				margin-left: -8px;
+				pointer-events: none;
+				&:hover{
+					opacity: unset;
+				}
+			}
+		}
+	}
+	&__submenu{
+		&__item{
+			font-size: ( 16px / $font-size) * 1rem;
+		}
+		&__link{
+			color: #fff;
+			font-weight: 400;
+		}
+		&__list{
+			display: block;
+		}
+	}
+	&__link{
+		display: flex;
+		width: 30%;
+		padding-right: 8px;
+		justify-content: space-between;
+		padding-left: 30px;
+		a{
+			display: flex;
+			align-items: center;
+			color: #fff;
+			flex-direction: column;
+			font-size: ( 18px / $font-size) * 1rem;
+			transition: .3s all;
+			span{
+				margin-bottom: 8px;
+			}
+			img{
+				width: 60px;
+				height: 60px;
+				object-fit: cover;
+			}
+			&:last-child{
+				margin-left: 8px;
+			}
+		}
+	}
+	&__copyright {
+		text-align: center;
+		font-size: ( 14px / $font-size) * 1rem;
+		color: #fff;
+		padding: 40px 0 30px;
+		font-weight: 300;
+		letter-spacing: 1.4px;
+	}
+}
+@include media-breakpoint-pc-tab{
+	.l-footer {
+		&__logo{
+			&__link{
+				&:hover{
+					opacity: 0.7;
+				}
+			}
+		}
+		&__menu{
+			&__link{
+				&:hover{
+					opacity: 0.7;
+				}
+			}
+		}
+		&__submenu{
+			&__link{
+				&:hover{
+					opacity: 0.7;
+				}
+			}
+		}
+		&__link{
+			a{
+				&:hover{
+					opacity: 0.7;
+				}
+			}
+		}
+	}
+}
+@include media-breakpoint-tab-sp{
+	.l-footer{
+		&__directional{
+			flex-direction: column;
+		}
+		&__menu{
+			width: 100%;
+		}
+		&__link{
+			width: 100%;
+			padding-top: 40px;
+			justify-content: center;
+			a{
+				margin: 0 10px;
+				&:last-child{
+					margin-left: 19px;
+				}
+			}
+		}
+	}
+}
+@include media-breakpoint-sp{
+	.l-footer{
+		padding-bottom: 80px;
+		&__logo{
+			padding: 50px 0 42px;
+			&__link{
+				text-align: center;
+				img{
+					width: 35px;
+					height: 30px;
+				}
+				span{
+					font-size: ( 20px / $font-size) * 1rem;
+					display: block;
+					margin-left: 0;
+					margin-top: 8px;
+				}
+			}
+
+		}
+		&__menu{
+			width: 100%;
+			&__list{
+				flex-direction: column;
+				align-items: center;
+			}
+			&__item{
+				width: 100%;
+				border-top: 1px solid #fff;
+				&:last-child{
+					border-bottom: 1px solid #fff;
+				}
+				&.is-active{
+					.l-footer__menu__icon{
+						.--open{
+							display: none;
+						}
+						.--close{
+							display: block;
+						}
+					}
+				}
+			}
+			&__link{
+				display: block;
+				line-height: 1;
+				padding: 21px 0;
+				text-align: center;
+				font-size: ( 16px / $font-size) * 1rem;
+				&.--pc{
+					pointer-events: unset;
+				}
+			}
+			&__icon{
+				.--close{
+					display: none;
+				}
+				right: 15%;
+    			top: 17px;
+			}
+		}
+		&__link{
+			margin-top: 16px;
+			padding: 0;
+			justify-content: space-between;
+			a {
+				font-size: ( 16px / $font-size) * 1rem;
+				margin: 0 6px;
+				img {
+					width: 80px;
+					height: 80px;
+					margin: 0;
+				}
+				&:nth-child(2){
+					margin-left: 0;
+				}
+				&:last-child {
+					margin-left: 0;
+				}
+			}
+		}
+		&__submenu{
+			&__item{
+				text-align: center;
+				font-size: ( 15px / $font-size) * 1rem;
+			}
+			&__link{
+				display: block;
+				width: 100%;
+				line-height: 1;
+				padding: 0 0 21px;
+			}
+			&__list{
+				display: none;
+			}
+		}
+		&__copyright {
+			letter-spacing: 0.2px;
+			font-size: ( 12px / $font-size) * 1rem;
+			padding: 41px 0 12px;
+		}
+	}
+}
+

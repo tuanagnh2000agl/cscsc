@@ -1,0 +1,80 @@
+.c-btnTwo{
+    display: block;
+    max-width: 300px;
+    width: 100%;
+    line-height: 1;
+    text-align: center;
+    color: #78C53C;
+    font-size: ( 18px / $font-size) * 1rem;
+    border: 1px solid #78C53C;
+    position: relative;
+    padding: 20px 0;
+    border-radius: 50px;
+    &::after{
+        transition: all 0.2s linear;
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        display: inline-block;
+        transform: translateY(-50%);
+        background: url('./images/common/icon_right.svg') no-repeat center/cover;
+        width: 10px;
+        height: 12px;
+    }
+    &.--icon{
+        &::after{
+            background: url('./images/temp/icon_btn.svg') no-repeat center/cover;
+            width: 15px;
+            height: 15px;
+        }
+    }
+    &.--pdf{
+        &::after{
+            display: none;
+        }
+        span{
+            position: absolute;
+            color: #fff;
+            width: 28px;
+            height: 14px;
+            top: 50%;
+            right: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(-50%);
+            font-size: ( 10px / $font-size) * 1rem;
+            font-weight: bold;
+            background: #FF3C00;
+            line-height: 1;
+            transition: all 0.2s linear;
+        }
+    }
+    &.--right{
+        &::after{
+            left: 30px;
+            right: unset;
+            background: url('./images/common/icon_left.svg') no-repeat center/cover;
+        }
+    }
+}
+@include media-breakpoint-pc-tab{
+    .c-btnTwo{
+        &:hover{
+            &::after{
+                right: 15px;
+            }
+            &.--right{
+                &::after{
+                    left: 15px;
+                }
+            }
+            &.--pdf{
+                span{
+                    right: 15px;
+                }
+            }
+        }
+    }
+}

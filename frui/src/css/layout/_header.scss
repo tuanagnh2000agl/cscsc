@@ -1,0 +1,439 @@
+.l-header {
+	background-color: $header-bg;
+	position: relative;
+	position: fixed;
+	width: 100%;
+	z-index: 10000000;
+	&__inner {
+		width: 100%;
+		margin: 0 auto;
+	}
+	&__content {
+		margin: 0 6.4% 0 7.9%;
+		display: flex;
+		align-items: center;
+		height: 120px;
+		justify-content: space-between;
+		transition: all 0.2s linear;
+	}
+
+	&__logo{
+		width: 18.5%;
+		margin-right: 5.3%;
+		img{
+			max-width: 207px;
+			margin-top: 9px;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	&__contain{
+		display: flex;
+		justify-content: space-between;
+		width: 82.5%;
+	}
+	&__nav{
+		width: 68%;
+		ul{
+			display: $flex;
+			width: 100%;
+			color: #333333;
+			align-items: baseline;
+			height: 100%;
+			font-weight: bold;
+			font-size:clamp(( 10px / $font-size) * 1rem, 1.5vw ,( 16px / $font-size) * 1rem);
+			font-family: $font-family-noto;
+			li{
+				flex: 1;
+				height: 100%;
+				display: inline-flex;
+				width: 100%;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+	}
+	&__link{
+		text-align: center;
+		padding: 0 8px;
+		display: block;
+		color: #333333;
+		transition: all 0.2s linear;
+		span{
+			text-align: center;
+			display: block;
+			padding-top: 42px;
+			background: url(./image/nav_home.png) no-repeat top center;
+			background-size: auto;
+			&.is-active{
+				background: url(./image/nav_home_red.png) no-repeat top center;
+				cursor: default;
+			}
+			&.facility{
+				background: url(./image/nav_facility.png) no-repeat top center;
+			}
+			&.lodging{
+				background: url(./image/nav_lodging.png) no-repeat top center;
+			}
+			&.onsen{
+				background: url(./image/nav_onsen.png) no-repeat top center;
+			}
+			&.meal{
+				background: url(./image/nav_meal.png) no-repeat top center;
+			}
+			&.sightseeing{
+				background: url(./image/nav_sightseeing.png) no-repeat top center;
+			}
+			&.access{
+				background: url(./image/nav_access.png) no-repeat top center;
+			}
+		}
+		&:hover{
+			span {
+				background: url(./image/nav_home_red.png) no-repeat top center;
+				&.facility{
+					background: url(./image/nav_facility_red.png) no-repeat top center;
+				}
+				&.lodging{
+					background: url(./image/nav_lodging_red.png) no-repeat top center;
+				}
+				&.onsen{
+					background: url(./image/nav_onsen_red.png) no-repeat top center;
+				}
+				&.meal{
+					background: url(./image/nav_meal_red.png) no-repeat top center;
+				}
+				&.sightseeing{
+					background: url(./image/nav_sightseeing_red.png) no-repeat top center;
+				}
+				&.access{
+					background: url(./image/nav_access_red.png) no-repeat top center;
+				}
+			}
+		}
+		&.--facility{
+			padding: 0 2px 0 18px;
+		}
+		&.--lodging{
+			padding: 0 1px 0 18px;
+		}
+		&.--onsen{
+			transform: translateX(-7px);
+		}
+		&.--meal{
+			transform: translateX(-21px);
+		}
+		&.--sightseeing{
+			transform: translateX(-15px);
+		}
+	}
+	&__contact{
+		display: $flex;
+		justify-content: space-between;
+		white-space: nowrap;
+		width: 28.1%;
+		&--phone{
+			font-family: $font-family-noto;
+			font-weight: 900;
+			margin-right: 6px;
+			a{
+				display: inline-flex;
+				align-items: center;
+				&:first-child{
+					margin-left: 15px;
+					letter-spacing: 1px;
+					span{
+						color: $blue;
+						padding: 0;
+					}
+					color: $blue;
+					font-size:clamp(( 12px / $font-size) * 1rem, 1.5vw ,( 18px / $font-size) * 1rem);
+					img{
+						width: 20px;
+						height: 20px;
+						margin-right: 6px;
+					}
+				}
+				&:last-child{
+					padding: 7px 32px 3px 30px;
+					display: block;
+					color: $white;
+					background: $blue;
+					border-radius: 25px;
+					font-size:clamp(( 10px / $font-size) * 1rem, 1.5vw ,( 16px / $font-size) * 1rem);
+					span{
+						display: inline-flex;
+						align-items: center;
+					}
+					img{
+						width: 23px;
+						height: 16px;
+						margin-right: 9px;
+					}
+				}
+			}
+		}
+		&--language{
+			color: $blue;
+			font-size:clamp(( 10px / $font-size) * 1rem, 1.5vw ,( 14px / $font-size) * 1rem);
+			letter-spacing: 1.5px;
+			.u-only__pc{
+				font-family: $font-family-noto;
+				font-weight: 900;
+			}
+			div{
+				font-weight: bold;
+				a{
+					&.is-active{
+						border-bottom: 1px solid $red;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+.l-menu__button {
+	display: none;
+	position: relative;
+	margin-left: auto;
+	z-index: 20;
+	margin: 9px 20px 0 5px;
+	img{
+		width: 52px;
+		height: 52px;
+		transition: all 0.2s linear;
+	}
+}
+
+// active menu
+.is-click2{
+	display: none;
+}
+.l-header__menusp{
+	padding: 55px 20px 0; 
+	&__link{
+		display: inline-block;
+		width: 100%;
+		margin-top: 20px;
+		&.--edit{
+			margin-top: 18px;
+		}
+		&:first-child{
+			img{
+				margin-right: 18px;
+				position: unset;
+				width: 22px;
+				height: 22px;
+			}
+		}
+		img.email{
+			width: 30px;
+			height: 21px;
+			margin-right: 18px;
+			position: unset;
+		}
+	}
+	.--hours{
+		color: $blue;
+		margin-top: 14px;
+		font-family: $font-family-noto;
+		font-size: ( 16px / $font-size) * 1rem;
+		font-weight: bold;
+		letter-spacing: 0.6px;
+	}
+	.--PDF{
+		color: $blue;
+		font-weight: bold;
+		font-size: ( 14px / $font-size) * 1rem;
+		margin-top: 29px;
+		margin-bottom: 31px;
+		span{
+			background: $red;
+			color: $white;
+			display: inline-block;
+			padding: 0px 8px;
+			margin-left: 13px;
+			width: 41px;
+			font-size: ( 11px / $font-size) * 1rem;
+		}
+	}
+	.--All{
+		color: $blue;
+		font-size: ( 14px / $font-size) * 1rem;
+		padding-bottom: 26px;
+	}
+}
+// Desktop + Tablet
+// --------------------------------------------------
+@include media-breakpoint-pc-tab12 {
+	.l-header {
+		&__nav {
+			display: block !important;
+			ul{ 
+				li{
+					display: block;
+				}
+			}
+		}
+		&__content{
+			margin: 0 10px;
+		}
+		&__logo{
+			margin-right: 2%;
+		}
+		&__link{
+			padding: 0;
+		}
+		&__contact{
+			flex: 1;
+			width: unset;
+			&--language {
+				letter-spacing: unset;
+			}
+			&--phone {
+				margin-right: 5px;
+				a{
+					&:last-child {
+						padding: 5px 20px;
+						margin-left: 5px;
+					}
+					&:first-child{
+						letter-spacing: unset;
+					}
+				}
+			}
+		}
+	}
+	.l-header__logo {
+		margin-right: 0;
+	}
+}
+
+// Phone
+// --------------------------------------------------
+@include media-breakpoint-sp {
+	.l-header {
+		&__nav {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: calc(100% - 80px);
+			margin-top: 80px;
+			background-color: $white;
+			z-index: 10;
+			overflow: scroll;
+		}
+		&__logo{
+			margin-left: 5%;
+			margin-right: 5%;
+			padding-top: 25px;
+			height: 100%;
+			width: unset;
+			background:  #fff;
+			img{
+				width: 116px;
+			}
+		}
+		&__content {
+			margin: 0;
+			height: 80px;
+			box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+		}
+		&__nav{
+			ul{
+				height: unset;
+				padding: 15px 20px 0;
+				flex-wrap: wrap;
+				column-gap: 10px;
+				row-gap: 16px;
+				font-size: ( 16px / $font-size) * 1rem;
+				li{
+				    position: relative;
+					width: calc(100%/2 - 5px);
+					height: 100px;
+					flex: unset;
+					&::after{
+						content: "";
+						position: absolute;
+						width: 18px;
+						height: 5px;
+						background: url("../../image/right.png");
+						right: 12.8%;
+						bottom: 28px;
+					}
+				}
+			}
+		}
+		&__contact{
+			&--language div {
+				font-size: ( 14px / $font-size) * 1rem;
+			}
+		}
+		
+		&__link{
+			display: inline-flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+			span{
+				line-height: 1.75;
+				padding-top: 40px;
+				background: url(./image/nav_home_sp.png) no-repeat top center;
+				&.is-active{
+					background: url(./image/nav_home_sp.png) no-repeat top center;
+					background-size: 34px 28px;
+					padding-top: 34px;
+				}
+				&.facility{
+					background: url(./image/nav_facility_sp.png) no-repeat top center;
+					background-size: 9px 30px;
+					padding-top: 34px;
+				}
+				&.lodging{
+					background: url(./image/nav_lodging_sp.png) no-repeat top center;
+					background-size: 24px 35px;
+					padding-top: 33px;
+				}
+				&.onsen{
+					background: url(./image/nav_onsen_sp.png) no-repeat top center;
+					background-size: 30px 30px;
+					padding-top: 33px;
+				}
+				&.meal{
+					background: url(./image/nav_meal_sp.png) no-repeat top center;
+					background-size: 36px 24px;
+				}
+				&.sightseeing{
+					background: url(./image/nav_sightseeing_sp.png) no-repeat top center;
+					background-size: 40px 22px;
+					padding-top: 29px;
+				}
+				&.access{
+					background: url(./image/nav_access_sp.png) no-repeat top center;
+					background-size: 22px 30px;
+				}
+			}
+		}
+	}
+	.l-menu__button {
+		display: block;
+	}
+}
+@media only screen and (max-width: 375px) {
+	.l-header{
+		&__logo{
+			margin-left: 2%;
+			margin-right: 2%;
+		}
+		&__contain{
+			width: unset;
+		}
+	}
+}

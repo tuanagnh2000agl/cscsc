@@ -1,0 +1,72 @@
+/* page kyushu*/
+.p-kyushu{
+    &__list{
+        margin-bottom: 249px;
+        .l-inner{
+            padding: 0;
+        }
+        &__title{
+            font-weight: 500;
+            margin-block: 166px 102px;
+            text-align: center;
+            .c-heading1{
+                img{
+                    width: 216px;
+                }
+            }
+        }
+        &__item{
+            padding: 0 20px;
+            &Right{
+                padding-right: 67px;
+                margin-block: 105px 100px;
+            }
+            &Left{
+                padding-left: 59px;
+                margin-block: 102px 99px;
+            }
+        }
+        .c-popup{
+            &__shelf{
+                border: 1px solid #eee;
+            }
+        }
+    }
+}
+@include media-breakpoint-tab{
+    .p-kyushu{
+        &__list{
+            &__item{
+                &Right{
+                    padding-right: 30px;
+                    padding-left: 30px;
+                }
+                &Left{
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+            }
+            &__title{
+                margin-block: 100px;
+            }
+        }
+    }
+}
+@include media-breakpoint-sp{
+    .p-kyushu{
+        &__list{
+            margin-bottom: 100px;
+            &__item{
+                padding: 0 16px;
+                &Right{
+                    padding: 0 16px;
+                    margin-block: 80px;
+                }
+                &Left{
+                    padding: 0 16px;
+                    margin-block: 80px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,87 @@
+.is-scroll-top {
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 2s ease;
+  &.active {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+
+.scrolldown1{
+    display: block;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    word-break: inherit;
+    &:hover{
+        opacity: 0.7;
+    }
+}
+.scrolldown1 span{
+  position: absolute;
+  left:-15px;
+  top: -15px;
+  color: #333333;
+  transform: rotate(90deg);
+  letter-spacing: 0.05em;
+  font-size: ( 14px / $font-size) * 1rem;
+  letter-spacing: 1.2px;
+}
+
+.scrolldown1::after{
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 4px;
+  width: 1px;
+  height: 50px;
+  background: #78C53C;
+  animation: pathmove 1.4s ease-in-out infinite;
+  opacity:0;
+}
+
+@keyframes pathmove{
+  0%{
+    height:0;
+    top:25px;
+    opacity: 0;
+  }
+  30%{
+    height:50px;
+    opacity: 1;
+  }
+  100%{
+    height:0;
+    top:75px;
+    opacity: 0;
+  }
+}
+@include media-breakpoint-pc-tab{
+    .scrolldown1{
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+}
+@include media-breakpoint-tab-sp{
+    .scrolldown1::after{
+      top: 16px;
+    }
+}
+@include media-breakpoint-sp{
+  .scrolldown1{
+    span{
+      left: -28px;
+      top: -25px;
+    }
+    &::after{
+      left: -10px;
+      top: 14px;
+    }
+  }
+}
+
+
+

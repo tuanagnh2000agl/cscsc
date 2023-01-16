@@ -1,0 +1,9 @@
+.c-text{
+    font-size: (13px / $font-size) * 1rem;
+    &.--color{
+        color: #ADADAD;
+    }
+    &.--fs1{
+        font-size: (18px / $font-size) * 1rem;
+    }
+}
